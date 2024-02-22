@@ -1,11 +1,11 @@
 {
-  "name": "marp-kakuteishinkoku-presentation",
+  "name": "marp-client",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @marp-team/marp-cli -s ./src --theme-set ./assets/styles/*.css"
+    "dev": "npx @marp-team/marp-cli -s ./src --theme-set ./src/assets/styles/*.css"
   },
   "keywords": [],
   "author": "",
