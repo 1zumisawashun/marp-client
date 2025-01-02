@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @marp-team/marp-cli -s ./src --theme-set ./src/assets/styles/*.css"
+    "dev": "npx @marp-team/marp-cli -s ./src --theme-set ./src/assets/styles/*.css",
+    "build": "marp -I . -o dist && cpx 'assets/**' dist/assets"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0"
+    "@marp-team/marp-cli": "^4.0.4"
   }
 }
