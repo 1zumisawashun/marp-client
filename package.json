@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx @marp-team/marp-cli -s ./src --theme-set ./src/assets/styles/*.css",
-    "build": "marp -I ./src/pages -o dist && cpx 'assets/**' dist/assets"
+    "build": "marp -I ./src/pages -o dist && cpx 'assets/**' dist/assets && cpx index.html dist"
   },
   "keywords": [],
   "author": "",
