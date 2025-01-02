@@ -1,11 +1,7 @@
 # marp-client
 
-Marp で作ったプレゼン資料を一元管理しているリポジトリです。
-
-## Overview
-
-- 20240218\_サンプル
-- 20240222\_確定申告
+Marp で作ったプレゼンテーション資料を一元管理しているリポジトリです。  
+Cloudflare Pages でホスティングしています。
 
 ## Installation
 
@@ -22,7 +18,19 @@ $ cd marp-client
 $ npm install
 ```
 
-- ローカル開発用 URL を開き動作確認をする
+- md ファイルは以下の VSCode 拡張機能を有効にしプレビュー画面で動作確認をする
+
+  - marp-team.marp-vscode
+
+- html ファイルは以下の VSCode 拡張機能を有効にしプレビュー画面で動作確認をする
+
+  - ritwickdey.LiveServer
+
+上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
+
+## Deprecated
+
+- ローカル開発用 URL を開き動作確認をすることもできますが非推奨です。上記方法で開発を進めてください。
 
 ```bash
 $ npm run dev
@@ -30,13 +38,12 @@ $ npm run dev
 
 http://localhost:8080/
 
-- 上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
-
 ## Troubleshoot
 
-- null
+- デプロイプロセスはどうなっている？
+  - Cloudflare Pages でホスティングしているため main にマージするとデプロイされます
 
 ## その他ドキュメント
 
-See [Marp Configuration Reference](https://marp.app/).
+See [Marp Configuration Reference](https://marp.app/).  
 See [Marpit Configuration Reference](https://marpit.marp.app/).
