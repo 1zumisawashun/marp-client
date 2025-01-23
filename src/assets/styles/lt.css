@@ -7,13 +7,12 @@
   --background-theme: rgb(250, 215, 255);
 }
 
-/* h1 {
-  font-size: 1.5rem;
-  color: #09c;
-} */
+h1 {
+  font-size: 2rem;
+}
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 span {
