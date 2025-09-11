@@ -20,6 +20,10 @@ span {
   color: #f00;
 }
 
+strong,b {
+  background-color: rgb(255, 220, 0);
+}
+
 /* ----- レイアウト ----- */
 .flex{
   display: flex;
