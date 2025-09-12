@@ -1,7 +1,6 @@
 # marp-client
 
 Marp で作ったプレゼンテーション資料を一元管理しているリポジトリです。  
-Cloudflare Pages でホスティングしています。
 
 ## Installation
 
@@ -18,32 +17,26 @@ $ cd marp-client
 $ npm install
 ```
 
-- md ファイルは以下の VSCode 拡張機能を有効にしプレビュー画面で動作確認をする
+## 作業手順
 
-  - marp-team.marp-vscode
-
-- html ファイルは以下の VSCode 拡張機能を有効にしプレビュー画面で動作確認をする
-
-  - ritwickdey.LiveServer
+1. VSCode で `.md` ファイルを右クリックし、「Previewを開く」でプレビューを確認しながら作業をする
 
 上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
 
-## Deprecated
+## Speaker Deck へのアップロード手順
 
-- ローカル開発用 URL を開き動作確認をすることもできますが非推奨です。上記方法で開発を進めてください。
-
-```bash
-$ npm run dev
-```
-
-http://localhost:8080/
+1. PDF出力する場合は、ツールバーの Marp アイコンを押下し「Export Slide Deck」を選択する
+2. 出力された PDF ファイルを [Speaker Deck](https://speakerdeck.com/1zumisawashun) にアップロードする
 
 ## Troubleshoot
 
-- デプロイプロセスはどうなっている？
-  - Cloudflare Pages でホスティングしているため main にマージするとデプロイされます
+null
+
+## Tips
+
+- https://zenn.dev/yhatt/scraps/d6004a2455e573
 
 ## その他ドキュメント
 
-See [Marp Configuration Reference](https://marp.app/).  
-See [Marpit Configuration Reference](https://marpit.marp.app/).
+- See [Marp Configuration Reference](https://marp.app/).  
+- See [Marpit Configuration Reference](https://marpit.marp.app/).
