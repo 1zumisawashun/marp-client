@@ -23,6 +23,14 @@ $ npm install
 
 上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
 
+## プレゼンテーション手順
+
+```bash
+$ npm run dev
+```
+
+http://localhost:8080/
+
 ## Speaker Deck へのアップロード手順
 
 1. PDF出力する場合は、ツールバーの Marp アイコンを押下し「Export Slide Deck」を選択する
