@@ -36,13 +36,19 @@ http://localhost:8080/
 1. PDF出力する場合は、ツールバーの Marp アイコンを押下し「Export Slide Deck」を選択する
 2. 出力された PDF ファイルを [Speaker Deck](https://speakerdeck.com/1zumisawashun) にアップロードする
 
+上記の手順で失敗する場合 [Troubleshoot](#Troubleshoot)を確認してください
+
 ## Troubleshoot
 
-null
+- Marp アイコンが表示されない
+    - Marp の VSCode 拡張機能をインストールしてください
+- CSS のテーマを追加したい
+    - .vscode/settings.json に対象の CSS ファイルを追加してください
 
 ## Tips
 
 - https://zenn.dev/yhatt/scraps/d6004a2455e573
+    - Marp の作者の執筆している Tips
 
 ## その他ドキュメント
 

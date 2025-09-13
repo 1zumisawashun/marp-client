@@ -1,3 +1,3 @@
 {
-  "markdown.marp.themes": ["src/assets/styles/lt.css"]
+  "markdown.marp.themes": ["src/assets/styles/lt.css", "src/assets/styles/custom.css"]
 }
