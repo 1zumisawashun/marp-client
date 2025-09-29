@@ -18,7 +18,7 @@ math: katex # Latexを書けるよう設定
 - 知らずにセカンドブレインを運用している方 -> 体系化された形で定義されていることを共有したい
 - 自分はどうやってセカンドブレインを育てているのか棚卸しをしたい
 
-![bg left:40% 80%](../assets/images/20250104/sample4.jpg)
+![bg left:40% 80%](./images/sample4.jpg)
 
 # セカンドブレインとは？
 
@@ -62,7 +62,7 @@ math: katex # Latexを書けるよう設定
 - 退勤後や休日のまとまった時間を使って Notion にまとめる（後述の Organize に該当）
 - 既読後は ✅ スタンプを押して読み忘れがないように工夫している
 
-![bg left:40% 80%](../assets/images/20250104/sample2.png)
+![bg left:40% 80%](./images/sample2.png)
 
 # Organize（整理）
 
@@ -73,7 +73,7 @@ math: katex # Latexを書けるよう設定
 - 基本は`/page`を使用して関心事をまとめ、記載量が多くなれば階層化している
 - Notion 独自の機能やハック的な使い方はしていない
 
-![bg left:40% 80%](../assets/images/20250104/sample3.png)
+![bg left:40% 80%](./images/sample3.png)
 
 # Organize（整理）の具体例
 

@@ -39,23 +39,22 @@ math: katex # Latexを書けるよう設定
 ## 全体の構成
 
 - TypeScript: 全体の言語基盤
-- Hono: Webサーバー/ルーティング
+- Hono: Web サーバー/ルーティング
 - Prisma: ORM（データベース操作）
 - SQLite: データ永続化
 
-![bg left:45% 85%](../assets/images/20250912/7.png)
-
+![bg left:45% 85%](./images/7.png)
 
 # 技術選定
 
 ## TypeScript
 
 - 採用理由
-  - フロントエンドでTypeScriptに慣れていたため、学習コストを抑えて開発できる
+  - フロントエンドで TypeScript に慣れていたため、学習コストを抑えて開発できる
   - 開発体験の一貫性（フロントエンドとバックエンドで同じ言語を使える）
 - 比較検討した技術
-  - Kotlin  
-    - 実務ではKotlinも扱っているがTypeScriptに比べると知見が足りず今回は見送った
+  - Kotlin
+    - 実務では Kotlin も扱っているが TypeScript に比べると知見が足りず今回は見送った
 
 <!-- hint! -> VSCode（既に拡張機能が入っていて開発体験が良いのでVSCodeで開発できるものを選定したかった） -->
 
@@ -63,24 +62,23 @@ math: katex # Latexを書けるよう設定
 
 ## Hono
 
-- 採用理由  
-  - TypeScriptとの親和性が高く、シンプルで高性能、学習コストが低い
-- 比較検討した技術  
-  - Express.js  
-    - TypeScriptとの型安全性が低い  
-  - Nest.js  
+- 採用理由
+  - TypeScript との親和性が高く、シンプルで高性能、学習コストが低い
+- 比較検討した技術
+  - Express.js
+    - TypeScript との型安全性が低い
+  - Nest.js
     - 機能が豊富だが学習コストが高い
-
 
 # 技術選定
 
 ## Prisma
 
-- 採用理由  
+- 採用理由
   - 型安全性が高く、ドキュメントやツール（ex: Prisma Studio）が充実している
-- 比較検討した技術  
-  - TypeORM  
-    - 型安全性が低い、Prismaの方が直観的にデータベースアクセスができる
+- 比較検討した技術
+  - TypeORM
+    - 型安全性が低い、Prisma の方が直観的にデータベースアクセスができる
   - Drizzle
     - ドキュメントが少ない
 
@@ -88,13 +86,13 @@ math: katex # Latexを書けるよう設定
 
 ## Prisma Studio
 
-![w:750](../assets/images/20250912/6.png)
+![w:750](./images/6.png)
 
 # 技術選定
 
 ## SQLite
 
-- 採用理由  
+- 採用理由
   - 手軽さと開発効率の高さ。本番環境でのスケーラビリティや複雑な機能が不要だったため採用
 - 比較検討した技術
   - MySQL, PostgreSQL
@@ -105,11 +103,12 @@ math: katex # Latexを書けるよう設定
 ## **POINT**
 
 技術選定は「何を達成したいか」という目的によって大きく変わります。  
-今回は、学習コストの低さや開発体験の一貫性、型安全性、開発効率を重視しました。  
+今回は、学習コストの低さや開発体験の一貫性、型安全性、開発効率を重視しました。
 
-そのため、既存知見を活かせるTypeScriptや、シンプルで高速なHono、型安全性とツールが充実したPrisma、手軽に扱えるSQLiteを選択しています。
+そのため、既存知見を活かせる TypeScript や、シンプルで高速な Hono、型安全性とツールが充実した Prisma、手軽に扱える SQLite を選択しています。
 
 <!-- 一方で、スケーラビリティや複雑な業務要件が求められる場合は、より高度なフレームワークやデータベースを選ぶ必要があります。   -->
+
 技術選定は「目的」「要件」「チームの知見」「将来の拡張性」など、複数の観点から総合的に判断することが重要です。
 
 # 実装の振り返り
@@ -119,41 +118,42 @@ math: katex # Latexを書けるよう設定
 # モデリング
 
 ## 振り返り
+
 エンティティのグループ化や関連付けの作業は何度も試行錯誤を繰り返し、一度で完成することはありませんでした。実際に手を動かしてみて、動かして壊してを繰り返すことで、より現実的なモデルに近づけることができました。
 
 ## 作業の流れ
 
 - エンティティや関係性をグループ化・整理
-- ER図に落とし込む
+- ER 図に落とし込む
 - 実際のスキーマや型定義に反映する
 
 ---
 
-## エンティティの整理（1回目）
+## エンティティの整理（1 回目）
 
-![w:400](../assets/images/20250912/1.png)
-
-
----
-
-## エンティティの関連付け（1回目）
-
-![w:700](../assets/images/20250912/2.png)
+![w:400](./images/1.png)
 
 ---
 
-## ER図の作成（1回目）
+## エンティティの関連付け（1 回目）
+
+![w:700](./images/2.png)
+
+---
+
+## ER 図の作成（1 回目）
+
 実装を進める中で予定実績のテーブルを作る必要性が出てきたので後ほど修正対応が入っています。
 
-![w:400](../assets/images/20250912/3.svg)
+![w:400](./images/3.svg)
 
 ---
 
-## ER図の作成（n回目）
+## ER 図の作成（n 回目）
 
-最終的なER図は以下の通りになりました。別途PDF添付します。
+最終的な ER 図は以下の通りになりました。別途 PDF 添付します。
 
-![w:500](../assets/images/20250912/4.svg)
+![w:500](./images/4.svg)
 
 # モデリング
 
@@ -163,19 +163,17 @@ math: katex # Latexを書けるよう設定
 
 割と実装に入ってからモデリングが足りないことに気づき、後戻りする場面もありましたが、早い段階で気づけたことで大きな手戻りにはならずに済みました。
 
-
 # モデリング
 
-## Miroの具体例
+## Miro の具体例
 
-![w:700](../assets/images/20250912/8.png)
+![w:700](./images/8.png)
 
 # ディレクトリ構成
 
 ## 振り返り
 
-コードの見通しをよくするために、3層アーキテクチャ（プレゼンテーション層、ビジネスロジック層、データアクセス層）を意識し、ドメイン駆動設計（DDD）の考え方を参考にディレクトリを分割しました。これにより、役割ごとに責任が明確になり、保守性や拡張性が高まりました。
-
+コードの見通しをよくするために、3 層アーキテクチャ（プレゼンテーション層、ビジネスロジック層、データアクセス層）を意識し、ドメイン駆動設計（DDD）の考え方を参考にディレクトリを分割しました。これにより、役割ごとに責任が明確になり、保守性や拡張性が高まりました。
 
 # ディレクトリ構成
 
@@ -186,17 +184,18 @@ application: ビジネスロジック層
 domain: ビジネスロジック層
 infrastructure: データアクセス層
 
-※ドメイン駆動設計（DDD）の考え方を参考に4階層に分けているものの今回、domainは使っていません。
+※ドメイン駆動設計（DDD）の考え方を参考に 4 階層に分けているものの今回、domain は使っていません。
 
-![bg left:40% 80%](../assets/images/20250912/5.png)
+![bg left:40% 80%](./images/5.png)
 
 # ディレクトリ構成
 
 ## **POINT**
 
-3層アーキテクチャやドメイン駆動設計の考え方を意識してディレクトリを分割することで、  
-- 役割ごとに責任が明確になる  
-- 変更や追加がしやすくなる  
+3 層アーキテクチャやドメイン駆動設計の考え方を意識してディレクトリを分割することで、
+
+- 役割ごとに責任が明確になる
+- 変更や追加がしやすくなる
 - チーム開発でも衝突が減る
 
 など、長期的な開発において大きなメリットがあります。
@@ -205,30 +204,31 @@ infrastructure: データアクセス層
 
 ## 振り返り
 
-課題1.1でCSVインポートの実装がありました。テストを通すためにはフロントエンドでCSVをJSONに変換しAPIを叩く必要がありますが、CSVファイルを自力でパースする際は落とし穴が多いためPapaparseというライブラリを使用しました。
+課題 1.1 で CSV インポートの実装がありました。テストを通すためにはフロントエンドで CSV を JSON に変換し API を叩く必要がありますが、CSV ファイルを自力でパースする際は落とし穴が多いため Papaparse というライブラリを使用しました。
 
 # CSV to JSON
 
 ## 具体例
 
 - カンマや改行
-  - CSVは「,」で区切られたデータ形式ですが、データ自体にカンマや改行が含まれている場合がある
+  - CSV は「,」で区切られたデータ形式ですが、データ自体にカンマや改行が含まれている場合がある
 - クォーテーション
   - データにダブルクォーテーション（"）が含まれている場合、囲み方やエスケープのルールを正しく扱わないと、値が意図しない形で分割される
 - ヘッダーの有無
-  - 1行目がヘッダーかどうか、ヘッダーの有無によってデータの扱い方が変わるため考慮が必要になる
+  - 1 行目がヘッダーかどうか、ヘッダーの有無によってデータの扱い方が変わるため考慮が必要になる
 
 # CSV to JSON
 
 ## Papaparse
 
-- 採用理由  
-  - Reactとの依存関係を減らし、バンドルサイズを軽くするため  
-  - 純粋なCSV to JSONのパース処理を行いたかったため、コアライブラリを採用
+- 採用理由
 
-- 比較検討した技術  
-  - react-papaparse  
-    - React依存があり、バンドルサイズが大きくなるため今回は見送った
+  - React との依存関係を減らし、バンドルサイズを軽くするため
+  - 純粋な CSV to JSON のパース処理を行いたかったため、コアライブラリを採用
+
+- 比較検討した技術
+  - react-papaparse
+    - React 依存があり、バンドルサイズが大きくなるため今回は見送った
 
 # CSV to JSON
 
@@ -236,19 +236,20 @@ infrastructure: データアクセス層
 
 自力でパースする場合は多くのエッジケースを考慮する必要があり、時間と労力がかかります。そのため、信頼できるライブラリの利用を検討するのも良い選択肢だと思います。
 
-
 # 計算処理の効率化
 
 ## 振り返り
 
-課題1.1のCSVインポートからDBに保存する際に、フラットな状態からデータ保存するために以下の多重構造に整形する必要があったので、Mapというデータ構造で計算量に気をつけた実装を行いました。
+課題 1.1 の CSV インポートから DB に保存する際に、フラットな状態からデータ保存するために以下の多重構造に整形する必要があったので、Map というデータ構造で計算量に気をつけた実装を行いました。
 
 ## 多重構造の具体例
+
 - 利用者（CareReceiver）
   - サービス（Service）
     - 日付ごとの計画・実績（Plans, Results）
 
 ※ O(N)->O(1)・n²->2n のような表現がされることもあります。
+
 <!-- 「O」は**オーダー記法（Big O記法）**のことで、アルゴリズムや処理の「計算量（時間やメモリの増え方）」を表す数学的な記号です。 -->
 
 ---
@@ -257,7 +258,7 @@ infrastructure: データアクセス層
 
 ```ts
 export const createImportCommand = (
-  data: ServicePlanCsvImport[],
+  data: ServicePlanCsvImport[]
 ): CreateImportCommand[] => {
   const careReceiverMap: CareReceiverMap = new Map();
 
@@ -295,7 +296,7 @@ export const createImportCommand = (
         });
 
         return { serviceYearMonth, dailyPlan, dailyResult, ...rest };
-      },
+      }
     );
   });
 
@@ -305,38 +306,44 @@ export const createImportCommand = (
 
 ---
 
-## O(N)の例(ループ処理がn回になっている例)
+## O(N)の例(ループ処理が n 回になっている例)
 
 ```ts
 export const createImportCommand = (
-  data: ServicePlanCsvImport[],
+  data: ServicePlanCsvImport[]
 ): CreateImportCommand[] => {
   const results: CreateImportCommand[] = [];
 
   // 利用者ごとに処理（毎回全データをfilter）
-  data.forEach(d => {
-    const careReceiverData = data.filter(item => 
-      item.careReceiverFullName === d.careReceiverFullName
+  data.forEach((d) => {
+    const careReceiverData = data.filter(
+      (item) => item.careReceiverFullName === d.careReceiverFullName
     );
-    
+
     // サービスごとに処理（また全データをfilter）
-    careReceiverData.forEach(cd => {
-      const serviceData = careReceiverData.filter(item => 
-        item.serviceName === cd.serviceName
+    careReceiverData.forEach((cd) => {
+      const serviceData = careReceiverData.filter(
+        (item) => item.serviceName === cd.serviceName
       );
-      
+
       // 重複チェックも毎回全配列を検索
-      const exists = results.some(r => 
-        r.careReceiverFullName === cd.careReceiverFullName && 
-        r.serviceName === cd.serviceName
+      const exists = results.some(
+        (r) =>
+          r.careReceiverFullName === cd.careReceiverFullName &&
+          r.serviceName === cd.serviceName
       );
-      
+
       if (!exists) {
         const { dailyPlan, dailyResult } = getDailyPlansAndResults({
           serviceYearMonth: cd.serviceYearMonth,
-          dateMap: new Map(serviceData.map(s => [s.serviceDate, { count: s.serviceCount, date: s.serviceDate }]))
+          dateMap: new Map(
+            serviceData.map((s) => [
+              s.serviceDate,
+              { count: s.serviceCount, date: s.serviceDate },
+            ])
+          ),
         });
-        
+
         results.push({ ...cd, dailyPlan, dailyResult });
       }
     });
@@ -350,7 +357,7 @@ export const createImportCommand = (
 
 ## **POINT**
 
-（JavaScriptの場合）MapやSetなどのデータ構造を活用することで、計算量をO(N)からO(1)に改善できる場合があります。「今の実装は本当に効率的か？」と一度立ち止まって考える習慣を持つことで、より良いコードが書けるようになります。
+（JavaScript の場合）Map や Set などのデータ構造を活用することで、計算量を O(N)から O(1)に改善できる場合があります。「今の実装は本当に効率的か？」と一度立ち止まって考える習慣を持つことで、より良いコードが書けるようになります。
 
 効率化は後からでもできる部分ですが、早い段階で意識できると、手戻りやバグの防止にもつながります。
 
@@ -362,11 +369,11 @@ export const createImportCommand = (
 
 ## 改善点
 
-- バックエンドバリデーションの実装  
-  - 入力値の検証を厳密に行うことで、予期しないデータの混入やバグを未然に防ぎ、より安全なAPI設計をできるようにしたい。型安全なバリデーションを導入することで、開発効率や保守性も向上が見込める。
+- バックエンドバリデーションの実装
+
+  - 入力値の検証を厳密に行うことで、予期しないデータの混入やバグを未然に防ぎ、より安全な API 設計をできるようにしたい。型安全なバリデーションを導入することで、開発効率や保守性も向上が見込める。
 
 - テスト実装
   - ユニットテストや結合テストを充実させることで、リファクタや機能追加時の品質を担保しやすくなる。また、テストコードがあることで開発メンバーが安心して開発を進められる環境を作ることができる。
-
 
 # ご清聴ありがとうございました！
